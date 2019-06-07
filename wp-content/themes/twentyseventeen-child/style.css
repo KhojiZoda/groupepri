@@ -10,8 +10,12 @@
  *           Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  *            Text Domain:  twentyseventeenchild
  *            */
-@import url('https://fonts.googleapis.com/css?family=Ubuntu:300&display=swap');
-body{
+ @font-face {
+   font-family: Ubuntu;
+   src: url(Abel-Regular.ttf);
+ }
+@import url('https://fonts.googleapis.com/css?family=Pinyon+Script&display=swap');
+ body{
         font-family: 'Ubuntu', sans-serif;
 }
 .twentyseventeen-front-page .site-content{
@@ -24,8 +28,22 @@ body{
         padding-bottom: 17%;
 }
 .site-branding-text .site-title{
-        font-size: 7em;
+        font-size: 9em;
+        font-weight: normal;
 }
+body.home.has-header-image .site-title a{
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  letter-spacing: 0;
+}
+@media screen and (min-width: 48em){
+  .navigation-top {
+    top: 0;
+    bottom: initial;
+  }
+}
+
 #masthead .navigation-top{
         background: black;
 }
@@ -155,4 +173,37 @@ and (max-device-width : 667px) {
 }
 .link-more{
   display: none;
+}
+
+#main.site-main .panel-content header {
+  margin-bottom: 0;
+}
+#main.site-main .panel-content header h2{
+  font-size: 1.4em;
+}
+#main.site-main .panel-content .entry-content{
+  font-size: 1.2em;
+  text-align: center;
+}
+#panel1 .panel-image{
+  font-family: 'Pinyon Script', cursive;
+}
+#panel1 .panel-image .entry-title {
+  position: relative;
+  text-align: center;
+  padding-top: 40%;
+  font-size: 3em;
+  font-weight: 100;
+  font-style: italic;
+  color: white;
+}
+#panel1 .panel-image .entry-content{
+  font-size: 2em;
+  font-weight: 100;
+  font-style: italic;
+  text-align: center;
+}
+
+.site-footer{
+  margin-top: 0;
 }
